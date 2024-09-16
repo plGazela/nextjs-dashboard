@@ -56,7 +56,7 @@ export default function Navigation() {
 
   return (
     <nav className="p-3 flex md:flex-col gap-3 bg-zinc-900 text-zinc-100 rounded-xl sticky top-3 order-last md:order-first">
-      { links.map((link) => {
+      { links.map(link => {
         return (
           <TooltipProvider delayDuration={300} key={link.name}>
             <Tooltip>
