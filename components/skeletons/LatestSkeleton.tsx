@@ -1,6 +1,6 @@
 import { Skeleton } from "@/components/ui/skeleton";
 
-export default function SkeletonLatestPosts() {
+export default function LatestSkeleton() {
   return (
     <div>
       <Skeleton className="mb-3 w-[200px] h-[40px] rounded-xl" />

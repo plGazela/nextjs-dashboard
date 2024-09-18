@@ -19,11 +19,13 @@ import {
   House, 
   Newspaper,
   Square,
+  MessageSquareText,
 } from "lucide-react";
 
 const links = [
   { name: "Dashboard", href: "/dashboard", icon: "House" },
   { name: "Posts", href: "/dashboard/posts", icon: "Newspaper" },
+  { name: "Comments", href: "/dashboard/comments", icon: "MessageSquareText"}
 ];
 
 const LinkIcon = ({ 
@@ -34,6 +36,7 @@ const LinkIcon = ({
   switch (icon) {
     case "House": return <House />
     case "Newspaper": return <Newspaper />
+    case "MessageSquareText": return <MessageSquareText />
     default: return <Square />
   }
 };

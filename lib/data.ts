@@ -4,6 +4,7 @@ import {
   User,
 } from "@/lib/types";
 
+// Fetching data
 export async function fetchStats() {
   try {
     const postsPromise = fetchPosts();
@@ -21,7 +22,7 @@ export async function fetchStats() {
       commentsCount: comments.length,
       usersCount: users.length,
     };
-  } catch (error) {
+  } catch (error: any) {
     throw new Error(`Failed to fetch stats: ${error}`);
   }
 }
@@ -35,7 +36,7 @@ async function fetchData<T>(url: string): Promise<T> {
     const data = await res.json();
   
     return data;
-  } catch (error) {
+  } catch (error: any) {
     throw new Error(`Failed to fetch data: ${error}`);
   }
 }
@@ -57,5 +58,5 @@ export async function fetchLatestPosts(): Promise<Post[]> {
 }
 
 export async function fetchLatestComments(): Promise<Comment[]> {
-  return fetchData("https://jsonplaceholder.typicode.com/commnets?_limit=5");
+  return fetchData("https://jsonplaceholder.typicode.com/comments?_limit=5");
 }
