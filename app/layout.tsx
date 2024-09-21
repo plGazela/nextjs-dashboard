@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en-EN" className="h-full">
       <body
-        className={`${openSans.variable} antialiased h-full`}
+        className={`${openSans.variable} antialiased h-full overflow-hidden`}
       >
         <ThemeProvider
           attribute="class"
